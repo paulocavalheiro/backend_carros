@@ -24,7 +24,7 @@ export class MarcaService {
             return this.marcaRepository.find()
         } catch (error) {
             throw new NotFoundException(
-                ' Erro! não foi possível buscar as marcas' + error.message
+                ' Erro! não foi possível listar as marcas' + error.message
             )
         }
     }

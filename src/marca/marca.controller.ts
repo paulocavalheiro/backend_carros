@@ -27,7 +27,6 @@ export class MarcaController {
     }
 
     @Get(':id')
-    // @UsePipes(new MarcaValidacao())
     async getMarca(@Param('id') id: string): Promise<Marca> {
         return this.marcaService.findOne(+id)
     }
