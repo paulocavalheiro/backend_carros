@@ -41,7 +41,7 @@ export class MarcaService {
                 return marca
             }
         } catch (error) {
-            if (error.response.statusCode == 404) {
+            if (error.response.statusCode === 404) {
                 throw error
             } else {
                 throw new InternalServerErrorException(
@@ -68,7 +68,7 @@ export class MarcaService {
                 return this.marcaRepository.save(marca)
             }
         } catch (error) {
-            if (error.response.statusCode == 400) {
+            if (error.response.statusCode === 400) {
                 throw error
             } else {
                 throw new InternalServerErrorException(
@@ -95,7 +95,7 @@ export class MarcaService {
                 return this.marcaRepository.save(marca)
             }
         } catch (error) {
-            if (error.response.statusCode == 400) {
+            if (error.response.statusCode === 400) {
                 throw error
             } else {
                 throw new InternalServerErrorException(
@@ -116,7 +116,7 @@ export class MarcaService {
                 return this.marcaRepository.delete(id)
             }
         } catch (error) {
-            if (error.response.statusCode == 404) {
+            if (error.response.statusCode === 404) {
                 throw error
             } else {
                 throw new InternalServerErrorException(

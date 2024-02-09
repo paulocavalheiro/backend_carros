@@ -6,6 +6,8 @@ import {
     JoinColumn,
     ManyToOne,
     OneToMany,
+    OneToOne,
+    JoinTable,
 } from 'typeorm'
 
 @Entity()
@@ -28,6 +30,7 @@ export class Carro {
     @Column()
     tipo_transmissao: string
 
-    @ManyToOne(() => Marca, (marca) => marca.id)
+    // relacao entre carro e marca (orm)
+    @ManyToOne(() => Marca, (marca) => marca.carros)
     marca: Marca
 }

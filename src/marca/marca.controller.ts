@@ -39,7 +39,7 @@ export class MarcaController {
 
     @Put(':id')
     @UsePipes(new ValidationPipe())
-    async update(@Param('id') id: string, @Body() MarcaDTO: MarcaDTO) {
+    async updateMarca(@Param('id') id: string, @Body() MarcaDTO: MarcaDTO) {
         return this.marcaService.update(+id, MarcaDTO)
     }
 

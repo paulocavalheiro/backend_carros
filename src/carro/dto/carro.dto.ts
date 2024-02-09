@@ -23,7 +23,7 @@ export class CarroDTO {
     modelo: string
 
     @IsNotEmpty({ message: 'O campo tipo transmissao não pode ser vazio' })
-    @IsInt({ message: 'O campo tipo transmissao deve ser string' })
+    @IsString({ message: 'O campo tipo transmissao deve ser string' })
     tipo_transmissao: string
 
     marca: Marca

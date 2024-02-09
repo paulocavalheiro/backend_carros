@@ -8,7 +8,7 @@ import { CarroModule } from './carro/carro.module'
 @Module({
     imports: [
         ConfigModule.forRoot({
-            envFilePath: '.env.development',
+            envFilePath: '.env',
         }),
         TypeOrmModule.forRoot({
             type: 'postgres',
