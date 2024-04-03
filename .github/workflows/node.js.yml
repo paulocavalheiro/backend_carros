@@ -29,10 +29,10 @@ jobs:
     - name: build
       run: npm run build 
 
-    # - name: pm2
-    #   run: pm2 stop nodedeploy
+    - name: pm2
+      run: pm2 stop nodedeploy
 
-    # - name: init pm2
-    #   run: pm2 start nodedeploy
+    - name: init pm2
+      run: pm2 start nodedeploy
 
       
